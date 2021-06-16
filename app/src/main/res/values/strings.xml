@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">احتيملات نيوز</string>
+    <string name="hallo">اهلا بكم في شبكة "\n" احتيملات نيوز</string>
+    <string name="name">الاسم</string>
+    <string name="password">كلمة المرور</string>
+    <string name="whatsup">واتس اب</string>
+    <string name="gmail">الايميل</string>
+    <string name="verification">يرجى مراجعة الايميل الخاص بك لتاكيد التسجيل,ثم اضغط تاكيد التسجيل</string>
+    <string name="videos">الاصدارات</string>
+    <string name="news">الأخبار</string>
+    <string name="chat">الملتقى</string>
+    <string name="urgent">عاجل</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="who_us">من نحن</string>
+    <string name="who_us_info"> - شبكة اخبارية ثورية تأسست في ريف حلب الشمالي  عام 2014 . "\n\n" - اسهمت بفاعلية كبيرة بالمعارك ضد تنظيم داعش و من بعده الاحزاب الانفصالية."\n\n"-
+        تأسست من قبل مجموعة من الناشطين السوريين. " \n\n"- تقوم الشبكة بنقل اخبار الشارع الثوري و تسلط الضوء على اعمال الفساد و تحارب الفاسدين و تنقل اخبار الشمال المحرر  للعالم.  "\n\n" - تهدف الشبكة لاعادة بناء الوعي الثوري و المساعدة برسم حياة جديدة للمواطن في كنف الثورة السورية .     "\n\n" - نحن صوت من لا صوت له و محاربة الظلم و الفساد أياً كان فاعله."\n"</string>
+    <string name="telegram">abo_ryyan11</string>
+    <string name="contanct_us">التواصل و المشاركة</string>
+    <string name="facebook_app_id">195544734946467</string>
+    <string name="msg">مرحبايا رجال</string>
+    <string name="nameTest">جمال الغول</string>
+    <string name="time">3:20AM</string>
+    <string name="edit">تاكيد التعديل</string>
+    <string name="yes">نعم</string>
+    <string name="No">لا</string>
+    <string name="publish">نشر</string>
+    <string name="add_link">انسخ الرابط</string>
+    <string name="add_title">أضغ العنوان</string>
+    <string name="copy">نم نسخ النص</string>
+    <string name="wrong_in_save_data">هناك خطا في حفظ البيانات</string>
+    <string name="registration_success">" تم التسجيل بنجاح"</string>
+    <string name="registration_failed">فشل التسجيل</string>
+    <string name="empty">احد الحقول قارغة</string>
+    <string name="ahtmaluat_title">احتيملات نيوز</string>
+    <string name="email">بريدك الالكتروني</string>
+    <string name="loading_wait">جار تحميل...</string>
+
+</resources>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".View.SignUp">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/registration_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="82dp"
+                android:layout_marginRight="82dp"
+                android:background="@drawable/rectangle"
+                android:text="التسجيل"
+                android:textColor="@color/White"
+                android:textSize="29sp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_edit"
+           />
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="20dp"
+                android:drawablePadding="8dp"
+                android:background="@drawable/background_edit_text"
+                android:drawableRight="@drawable/ic_group_92"
+                android:ems="10"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+
+                android:paddingRight="8dp"
+
+                android:paddingBottom="8dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_image_btn" />
+
+            <EditText
+                android:id="@+id/password_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_edit_text"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:gravity="right"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/ic_password_signup"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintLeft_toLeftOf="@+id/editTextEmailAddress"
+                app:layout_constraintRight_toRightOf="@+id/editTextEmailAddress"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddress" />
+
+
+            <EditText
+                android:id="@+id/editTextEmailAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_edit_text"
+                android:drawableRight="@drawable/email_signup"
+            android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/title"
+
+                app:layout_constraintRight_toRightOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <ImageButton
+                android:id="@+id/add_image_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_view_profile_person"
+                app:srcCompat="@drawable/ic_plus" />
+            <!--
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="36dp"
+                android:text="@string/name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_image_btn" />
+
+        <EditText
+                android:id="@+id/wahtsup_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_edit_text"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="4dp"
+android:visibility="gone"
+                app:layout_constraintRight_toRightOf="@+id/password_edit"
+                app:layout_constraintLeft_toLeftOf="@+id/password_edit"
+                />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="@string/whatsup"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:visibility="gone"
+
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="456dp" />
+-->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.03" />
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_view_profile_person"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/image_user"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo"
+                app:civ_border_width="3dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
+                app:progressBarAutoRotateInterval="1000"
+                app:progressBarImage="@drawable/logo"
+                app:roundAsCircle="true"
+                app:roundBottomRight="false"
+                app:roundingBorderColor="@color/primary"
+                app:roundingBorderPadding="2dp"
+                app:roundingBorderWidth="2dp" />
+
+
+            <TextView
+                android:id="@+id/txt_verification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:text="@string/verification"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/registration_btn"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_edit"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/confirm_regstraion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="82dp"
+
+                android:layout_marginRight="82dp"
+                android:background="@drawable/rectangle"
+                android:text=" تأكيد التسجيل"
+                android:textColor="@color/White"
+                android:layout_marginTop="32dp"
+                android:textSize="29sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/registration_btn"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_edit" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registration_btn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

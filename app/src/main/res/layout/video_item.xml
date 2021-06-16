@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/img_video_placholder"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_toshow"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:src="@drawable/motion_video_24"
+
+        />
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/video_news"
+        android:layout_width="0dp"
+        app:layout_constraintCircleRadius="4dp"
+        android:layout_height="240dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="8dp"
+
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <ImageView
+        android:id="@+id/full_screen_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:visibility="invisible"
+        android:src="@drawable/fullscreen_24"
+        app:layout_constraintEnd_toEndOf="@+id/video_news"
+        app:layout_constraintTop_toTopOf="@+id/video_news" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

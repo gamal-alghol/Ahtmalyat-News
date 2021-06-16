@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/news"
+        android:icon="@drawable/ic_news"
+        android:title="@string/news" />
+    <item
+        android:id="@+id/videos"
+        android:icon="@drawable/ic_path_84"
+        android:title="@string/videos" />
+
+    <item
+        android:id="@+id/chat_menu"
+        android:icon="@drawable/ic_talk"
+        android:title="@string/chat" />
+
+    <item
+        android:id="@+id/urgent"
+        android:icon="@drawable/ic_urgent"
+        android:iconTint="@color/White"
+
+        android:title="@string/urgent" />
+
+
+</menu>
+

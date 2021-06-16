@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    android:id="@+id/chat_menu"
+    tools:context=".Fragment.Chat">
+
+
+    <EditText
+        android:id="@+id/edit_text_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+
+        android:background="@drawable/ic_rectangle_19"
+        android:hint="ابدأ رسالتك هنا"
+        android:inputType="textMultiLine"
+android:layout_marginBottom="8dp"
+        android:maxLines="5"
+        android:paddingLeft="16dp"
+        android:paddingTop="4dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+
+        app:layout_constraintLeft_toRightOf="@+id/btn_get_image"
+        app:layout_constraintRight_toLeftOf="@+id/send"
+
+        />
+
+    <ImageButton
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+
+        android:background="@color/transparent"
+        android:elevation="8dp"
+        android:src="@drawable/ic_send"
+
+app:layout_constraintTop_toTopOf="@id/edit_text_msg"
+        app:layout_constraintBottom_toBottomOf="@id/edit_text_msg"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_get_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="@color/transparent"
+        android:elevation="8dp"
+        android:src="@drawable/ic_computer"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_msg"
+        app:layout_constraintLeft_toRightOf="@id/imageButton_mic"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_msg" />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:foregroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/msg_replay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_chat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            android:transcriptMode="alwaysScroll"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_condition"
+ />
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+    android:id="@+id/msg_replay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toTopOf="@+id/edit_text_msg"
+    app:layout_constraintRight_toLeftOf="@+id/send"
+    android:background="@drawable/ic_rectangle_17"
+    app:layout_constraintLeft_toRightOf="@+id/btn_get_image"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/sender_replay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12sp"
+        android:gravity="right"
+        android:paddingTop="4dp"
+        android:textColor="@color/line"
+android:pointerIcon="arrow"
+        android:visibility="visible"
+        android:padding="4dp"/>
+    <TextView
+        android:id="@+id/txt_replay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:gravity="right"
+        android:textSize="14sp"
+        android:paddingTop="4dp"
+        android:textColor="@color/black"
+
+
+        android:padding="4dp"/>
+</LinearLayout>
+
+
+
+    <ImageButton
+        android:id="@+id/imageButton_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+
+        android:background="@color/transparent"
+        android:src="@drawable/ic_mic"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_get_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_get_image"
+ />
+
+
+    <ProgressBar
+        android:id="@+id/upLoad_file"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:max="100"
+        android:min="0"
+        android:progressDrawable="@drawable/progres_upload"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_get_image"
+        app:layout_constraintLeft_toLeftOf="@id/btn_get_image"
+        app:layout_constraintTop_toTopOf="@+id/btn_get_image"
+        app:layout_constraintRight_toRightOf="@id/btn_get_image"
+        />
+
+    <TextView
+        android:id="@+id/txt_progress_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/upLoad_file"
+        app:layout_constraintEnd_toEndOf="@+id/upLoad_file"
+        app:layout_constraintStart_toStartOf="@+id/upLoad_file"
+        app:layout_constraintTop_toTopOf="@+id/upLoad_file"
+        tools:text="20%" />
+
+
+    <ProgressBar
+        android:id="@+id/upLoad_file_audio"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:max="100"
+        android:min="0"
+        android:progressDrawable="@drawable/progres_upload"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_mic"
+        app:layout_constraintLeft_toLeftOf="@id/imageButton_mic"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_mic"
+        app:layout_constraintRight_toRightOf="@id/imageButton_mic"
+
+        />
+
+    <TextView
+        android:id="@+id/txt_progress_upload_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/upLoad_file_audio"
+        app:layout_constraintEnd_toEndOf="@+id/upLoad_file_audio"
+        app:layout_constraintStart_toStartOf="@+id/upLoad_file_audio"
+        app:layout_constraintTop_toTopOf="@+id/upLoad_file_audio"
+        tools:text="20%" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_pupUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/img_pic"
+        android:elevation="5dp"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="9dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_msg"
+        app:layout_constraintLeft_toLeftOf="parent"
+       >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_camera"
+               />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="الكاميرا"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/camera"
+
+                app:layout_constraintRight_toRightOf="@+id/camera"
+                app:layout_constraintTop_toBottomOf="@+id/camera" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/camera"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageButton
+                android:id="@+id/gallary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/transparent"
+                app:layout_constraintLeft_toLeftOf="@id/view1"
+                app:layout_constraintRight_toLeftOf="@+id/view"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_gallary" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الاستديو"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/gallary"
+                app:layout_constraintRight_toRightOf="@+id/gallary"
+                app:layout_constraintTop_toBottomOf="@+id/gallary" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/line"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintRight_toLeftOf="@+id/gallary"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:background="@color/transparent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/view1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_headphones" />
+
+            <TextView
+                android:id="@+id/textView111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الصوت"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/audio"
+                app:layout_constraintRight_toRightOf="@+id/audio"
+                app:layout_constraintTop_toBottomOf="@+id/audio" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

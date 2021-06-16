@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00B730</color>
+    <color name="colorPrimaryDark">#029829</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="background_sblash">#4D4D4D</color>
+    <color name="White">#fff</color>
+    <color name="rectangle">#00B730</color>
+    <color name="black">#000</color>
+    <color name="edit_text">#E8E8E8</color>
+    <color name="navigation_Bar">#009245</color>
+    <color name="line">#707070</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey_light">#F1F1F1</color>
+
+
+</resources>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:elevation="30dp"
+    android:layout_marginBottom="4dp"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_view_user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/secular_one"
+        android:text="@string/ahtmaluat_title"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/image_view_user"
+        app:layout_constraintTop_toTopOf="@+id/image_view_user" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="14dp"
+        android:elevation="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/image_view_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_user">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/img_pic"
+
+            android:layout_height="wrap_content">
+
+
+
+
+            <TextView
+                android:id="@+id/viewer_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+android:layout_marginBottom="16dp"
+android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_view"
+                android:drawablePadding="3dp"
+                android:text="15"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/view_pager_imgs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.108" />
+
+            <TextView
+                android:id="@+id/time_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="02:10:AM"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/spring_dots_indicator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/spring_dots_indicator" />
+
+
+            <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                android:id="@+id/spring_dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:dotsColor="@color/primary"
+                app:dotsCornerRadius="15dp"
+                app:dotsSize="10dp"
+                app:dotsStrokeColor="@color/primary"
+                app:dotsStrokeWidth="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewer_num"
+                app:layout_constraintEnd_toStartOf="@+id/time_news"
+                app:layout_constraintStart_toEndOf="@+id/viewer_num"
+                app:layout_constraintTop_toTopOf="@+id/viewer_num"
+                app:stiffness="300" />
+
+
+            <TextView
+                android:id="@+id/title_news"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="سطيبلهتسكيبخهلتlasdfnas;dfjasdlfjhlaksjdhflasdkjfhklajsdfhlaskhasldkfjhasldfkjhشكخسه" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager_imgs"
+                android:layout_width="0dp"
+                android:layout_height="350dp"
+                android:layout_marginStart="8dp"
+
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/viewer_num"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_news"
+                />
+
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager_videos"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginEnd="8dp"
+
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/viewer_num"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_news"
+
+                />
+
+
+
+
+            <com.keenfin.audioview.AudioView
+                android:id="@+id/record_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:minified="true"
+                app:primaryColor="@color/primary"
+                app:selectControls="false"
+                app:showTitle="false"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/viewer_num"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_news"/>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/textView12" />
+</androidx.constraintlayout.widget.ConstraintLayout>

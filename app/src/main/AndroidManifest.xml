@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.karkor.ahtmalyat">
+
+    <application
+        xmlns:tools="http://schemas.android.com/tools"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:allowBackup"
+       >
+        <activity android:name="com.karkor.ahtmalyat.View.web"></activity>
+        <activity android:name="com.karkor.ahtmalyat.View.FullScreenImageActivity" />
+        <activity
+            android:name="com.karkor.ahtmalyat.View.FullScreenVideoActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.karkor.ahtmalyat.View.Home"
+            android:windowSoftInputMode="adjustPan"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karkor.ahtmalyat.View.SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.karkor.ahtmalyat.View.Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.karkor.ahtmalyat.View.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider195544734946467"
+            android:exported="true" />
+
+        <service android:name="com.karkor.ahtmalyat.Service.UploadService" />
+        <service
+            android:name="com.karkor.ahtmalyat.Notfication.MyFairBaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5278795364849520~8149666847" />
+    </application>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+</manifest>
